@@ -26,6 +26,10 @@ def create_parser():
                           dest="builder", const="dirhtml",
                           help='Render PEPs to "index.html" files within "pep-NNNN" directories. '
                                'Cannot be used with "-f" or "-l".')
+    builders.add_argument("-g", "--gettext", action="store_const",
+                          dest="builder", const="gettext",
+                          help='Generate pot files'
+                               'Cannot be used with "-f" or "-l".')
 
     # flags / options
     parser.add_argument("-w", "--fail-on-warning", action="store_true",
