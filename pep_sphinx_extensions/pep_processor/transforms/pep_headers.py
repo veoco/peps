@@ -85,8 +85,8 @@ class PEPHeaders(transforms.Transform):
             self.document.note_pending(pending)
 
         # If there are less than two headers in the preamble, or if Title is absent
-        if len(header) < 2 or header[1][0].astext().lower() != "title":
-            raise PEPParsingError("No title!")
+        # if len(header) < 2 or header[1][0].astext().lower() != "title":
+        #     raise PEPParsingError("No title!")
 
         fields_to_remove = []
         for field in header:
