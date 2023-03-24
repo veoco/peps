@@ -73,6 +73,10 @@ if __name__ == "__main__":
     # builder configuration
     if args.builder is not None:
         sphinx_builder = args.builder
+
+        if args.builder == "gettext":
+            build_directory = build_directory / "gettext"
+            doctree_directory = build_directory / ".doctrees"
     else:
         # default builder
         sphinx_builder = "html"
